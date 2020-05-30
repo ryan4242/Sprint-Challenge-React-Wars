@@ -1,7 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Character from './components/Character';
+import styled from 'styled-components';
 import './App.css';
+
+const Container = styled.div`
+  width: 85vw;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -25,9 +34,12 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {characters.map(char => {
-        return <Character key={char.url} char={char}/>
-      })}
+      <Container>
+        {characters.map(char => {
+          return <Character key={char.url} char={char}/>
+        })}
+      </Container>
+      
     </div>
   );
 }
