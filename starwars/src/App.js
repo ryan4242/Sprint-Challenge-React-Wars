@@ -2,16 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Search from './components/Search'
 import Character from './components/Character';
-import styled from 'styled-components';
+import {Container} from './style/styled';
 import './App.css';
-
-const Container = styled.div`
-  width: 85vw;
-  margin: 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
