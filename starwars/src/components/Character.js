@@ -35,7 +35,7 @@ const Character = ({char}) => {
     <Card>
       <h3>{char.name}</h3>
       <p>Species: {species}</p>
-      <p>Born on: {planet}</p>
+      <p>From: {planet}</p>
     </Card>
   )
 }

@@ -20,7 +20,6 @@ const App = () => {
   useEffect(() => {
     axios.get(`https://swapi.py4e.com/api/people/${search}`)
     .then(response => {
-      console.log(search);
       setCharacters(response.data.results);
     })
   }, [search]);
